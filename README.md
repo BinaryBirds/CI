@@ -12,7 +12,7 @@ Swift + Continuous Integration service = ❤️
 
 ```shell
 git clone https://github.com/BinaryBirds/CI.git
-cd ci
+cd CI
 make install #or swift run install
 ```
 
@@ -60,6 +60,8 @@ let project = Project(name: "Example",
 ```
 
 Task should be valid Swift package repositories with executable targets (task name = executable target). Input parameters will be available through the `CommandLine.arguments` variable, but you can also pass around environment variables as well. See `OutputGenerator` task for more example. Local & remote repositories are both supported. 
+
+Run workflow:  `swift ci run` runs the first one in the workflows array or you cna use `swift ci run workflow-name` to run a specific one (eg. `swift ci run linux`).
 
 
 
